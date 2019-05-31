@@ -8,3 +8,16 @@
 
 
     
+    @media only screen and (max-width: 415px) {
+
+        .container {
+            width: 410px;
+
+            margin-left: auto;
+        }
+
+        h1 {
+            font-size: 35px;
+        }
+            
+      }
