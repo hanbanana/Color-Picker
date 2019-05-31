@@ -1,0 +1,24 @@
+{
+  "name": "color-picker",
+  "version": "1.0.0",
+  "description": "Color Picker",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanbanana/Color-Picker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hanbanana/Color-Picker/issues"
+  },
+  "homepage": "https://github.com/hanbanana/Color-Picker#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
