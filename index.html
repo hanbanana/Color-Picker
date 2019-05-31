@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <title>Color Picker</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <p>
+            <h1 class="text-center"><span style='color: rgb(0, 183, 255)'>y</span>
+                <span style='color: rgb(0, 183, 255)'>e</span>
+                <span style='color: rgb(255, 166, 0)'>a</span>
+                <span style='color: rgb(255, 166, 0)'>h</span>
+                <span style='color: rgb(255, 166, 0)'>n</span>
+                <span style='color: red'>&nbsp; c</span>
+                <span style='color: rgb(0, 195, 255)'>o</span>
+                <span style='color: rgb(62, 253, 3)'>m</span>
+                <span style='color: rgb(143, 120, 243)'>p</span>
+                <span style='color: rgb(255, 0, 255)'>a</span>
+                <span style='color: rgb(76, 0, 255)'>n</span>
+                <span style='color: rgb(247, 0, 255)'>y</span></h1>
+        </p>
+        <br><br><br>
+        <h1 class="text-center">Color Picker</h1>
+        <br>
+        <div>
+            toHEXString = <span id="hex-str"></span><br />
+            toRGBString = <span id="rgb-str"></span><br />
+            R, G, B = <span id="rgb"></span><br />
+            H, S, V = <span id="hsv"></span>
+        </div>
+        <br><br>
+        <input class="jscolor {onFineChange:'update(this)'}" value="ffcc00">
+
+        <input class="jscolor {onFineChange:'update(this)'}" value="10FF50">
+
+        <input class="jscolor {onFineChange:'update(this)'}" value="12FFF7">
+
+        <input class="jscolor {onFineChange:'update(this)'}" value="1018FF">
+
+        <input class="jscolor {onFineChange:'update(this)'}" value="FF1DE1">
+
+        <input class="jscolor {onFineChange:'update(this)'}" value="FF260D">
+
+        <input class="jscolor {onFineChange:'update(this)'}" value="E7FF0B">
+
+        <input class="jscolor {onFineChange:'update(this)'}" value="DCE4FF">
+
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+
+        <p>
+            <h1 class="text-center"><span style='color: rgb(0, 183, 255)'>y</span>
+                <span style='color: rgb(0, 183, 255)'>e</span>
+                <span style='color: rgb(255, 166, 0)'>a</span>
+                <span style='color: rgb(255, 166, 0)'>h</span>
+                <span style='color: rgb(255, 166, 0)'>n</span>
+                <span style='color: red'>&nbsp; c</span>
+                <span style='color: rgb(0, 195, 255)'>o</span>
+                <span style='color: rgb(62, 253, 3)'>m</span>
+                <span style='color: rgb(143, 120, 243)'>p</span>
+                <span style='color: rgb(255, 0, 255)'>a</span>
+                <span style='color: rgb(76, 0, 255)'>n</span>
+                <span style='color: rgb(247, 0, 255)'>y</span></h1>
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <script>
+        function update(picker) {
+            document.getElementById('hex-str').innerHTML = picker.toHEXString();
+            document.getElementById('rgb-str').innerHTML = picker.toRGBString();
+
+            document.getElementById('rgb').innerHTML =
+                Math.round(picker.rgb[0]) + ', ' +
+                Math.round(picker.rgb[1]) + ', ' +
+                Math.round(picker.rgb[2]);
+
+            document.getElementById('hsv').innerHTML =
+                Math.round(picker.hsv[0]) + '&deg;, ' +
+                Math.round(picker.hsv[1]) + '%, ' +
+                Math.round(picker.hsv[2]) + '%';
+        }
+    </script>
+
+
+    <script src="jscolor.js"></script>
+</body>
+
+</html>
